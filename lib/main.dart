@@ -10,8 +10,9 @@ class BloodDonateApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const BloodDonate(),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: BloodDonate(),
     );
   }
 }
@@ -22,11 +23,45 @@ class BloodDonate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 254, 247, 255),
+      backgroundColor: const Color.fromARGB(255, 254, 247, 255),
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: const Text('Blood Donate'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+          ),
+        ],
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              backgroundColor: Colors.grey,
+              radius: 90,
+              child: Icon(
+                Icons.bloodtype_outlined,
+                size: 55,
+                color: Colors.red,
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Text(
+              'Donate Blood',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
-
-
-
-
