@@ -45,7 +45,7 @@ class BloodDonate extends StatelessWidget {
               radius: 90,
               child: Icon(
                 Icons.bloodtype_outlined,
-                size: 55,
+                size: 80,
                 color: Colors.red,
               ),
             ),
