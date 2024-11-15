@@ -26,12 +26,14 @@ class BloodDonate extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 254, 247, 255),
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: const Text('Blood Donate'),
+        title: const Text('Need Blood', style: TextStyle(
+          color: Colors.white,
+        ),),
         centerTitle: true,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.search),
+            icon: const Icon(Icons.search, color: Colors.white,),
           ),
         ],
       ),
